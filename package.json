@@ -32,12 +32,10 @@
     "yarn": "^1.22.22"
   },
   "scripts": {
-    "start-rewired": "react-app-rewired start",
-    "start": "react-scripts start",
-    "build": "react-app-rewired build",
-    "serve": "webpack serve --mode development",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
