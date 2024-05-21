@@ -1,0 +1,1 @@
+export const rihanna = "https://www.rollingstone.com/wp-content/uploads/2024/03/GettyImages-1952520015.jpg?w=1581&h=1054&crop=1";
