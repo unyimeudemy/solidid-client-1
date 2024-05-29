@@ -8,6 +8,7 @@ import {useNavigate} from "react-router-dom";
 import {  useSelector } from 'react-redux';
 import {useLocation} from "react-router-dom"
 import { SolidIDLogo } from './SolidIDLogo';
+import { PageNotAvailable } from './PageNotAvailable';
 
 const Container = styled.div`
     height: 70px;
@@ -40,7 +41,7 @@ display: flex;
 gap: 10px;
 align-items: center;
 justify-content: center;
-    
+cursor: pointer;
 `
 
 const ProfileButton = styled.button`
@@ -132,15 +133,21 @@ const location = useLocation();
         <> 
         <SolidIDLogo/>
         <Tabs>
-            <Tab>
+            <Tab
+                onClick={() => navigate("/services")}       
+            >
             <SupportAgentIcon  htmlColor='#263f40'/> 
             <Text>Services</Text>
             </Tab>
-        <Tab>
+        <Tab
+            onClick={() => navigate("/services")} 
+        >
         <AssessmentIcon  htmlColor='#263f40'/>
         <Text>Reports</Text>
         </Tab>
-        <Tab>
+        <Tab
+            onClick={() => navigate("/services")} 
+        >
         <GroupsIcon  htmlColor='#263f40'/>
         <Text>Partners</Text>
         </Tab>

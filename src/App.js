@@ -15,6 +15,7 @@ import { ProfilePage } from "./pages/ProfilePage.jsx";
 import { LogoutPage } from "./pages/LogoutPage.jsx";
 import { OrgSignUpPage } from "./pages/OrgSignUpPage.jsx";
 import { OrgSignInPage } from "./pages/OrgSignInPage.jsx";
+import { PageNotAvailable } from "./components/PageNotAvailable.jsx";
 
 const Container = styled.div`
     background-color: #EEEEEE;
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/log_out" element={<LogoutPage/>}/>
                     <Route path="/org_sign_up" element={<OrgSignUpPage/>}/>
                     <Route path="/org_sign_in" element={<OrgSignInPage/>}/>
+                    <Route path="/services" element={<PageNotAvailable/>}/>
                 </Route>
             </Routes>
         </Container>

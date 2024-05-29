@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 import Axios from '../lib/api/axios'
 import {useSelector} from "react-redux"
+import S3FileUpload from 'react-s3';
+import { s3_Config } from '../configs/s3Config';
 
 const Container = styled.div`
     height: 100%;
@@ -76,6 +78,8 @@ export const AddOrgForm = ({setViewUserProfile}) => {
     const [orgEmail, setOrgEmail] = useState();
     const [staffRole, setStaffRole] = useState();
     const [staffId, setStaffId] = useState();
+    const [savedImage, setSavedImage] = useState();
+
 
 
     const {currentUser} = useSelector((state) => state.user);
@@ -96,7 +100,8 @@ export const AddOrgForm = ({setViewUserProfile}) => {
                     staffRole,
                     staffId,
                     orgName,
-                    orgEmail
+                    orgEmail,
+                    profileImage: savedImage.location
                 }
             )
             setViewUserProfile(true);
@@ -105,6 +110,17 @@ export const AddOrgForm = ({setViewUserProfile}) => {
         }catch(error){
             console.log(error);
         }
+    }
+
+    const upload = (e) => {
+        console.log(e[0]);
+
+        S3FileUpload.uploadFile(e[0], s3_Config)
+        .then(data => {
+            console.log("data: ", data);
+            setSavedImage(data);
+        })
+        .catch(err => console.error("err: ", err))
     }
 
 
@@ -133,6 +149,10 @@ export const AddOrgForm = ({setViewUserProfile}) => {
                 type='text'
                 placeholder='Staff ID'
                 onChange={(e) => {setStaffId(e.target.value)}}
+            />
+            <Input
+                type="file"
+                onChange={(e) => {upload(e.target.files)}}
             />
             
         </Inputs>
