@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import  Microsoft  from '../Images/Microsoft.png'
 import  google  from '../Images/google.png'
-import  facebook  from '../Images/facebook.png'
 import Axios from '../lib/api/axios';
 import {useSelector, useDispatch} from "react-redux";
 import { addOrg } from '../redux/slices/orgChoosenSlice';
@@ -185,7 +184,7 @@ useEffect(() => {
             setDisplayToken(!displayToken);
     }
 
-
+console.log(orgList);
 
   return (
     <Container>
@@ -206,7 +205,8 @@ useEffect(() => {
                     <ListItem 
                         onClick={() => handleItemClicked(org.orgEmail)}
                     >
-                        <Logo src={Microsoft} alt='Microsoft'/>
+                            <Logo src={org?.profileImage} alt='Microsoft'/> 
+                            
                         <OrganizationName>{org.orgName}</OrganizationName>
                     </ListItem>
                     <Hr/>

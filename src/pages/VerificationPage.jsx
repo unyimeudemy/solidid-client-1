@@ -5,6 +5,8 @@ import { rihanna } from '../Images/ImageUrls'
 import { useState } from 'react'
 import Axios from '../lib/api/axios'
 import { TokenInput } from '../components/TokenInput'
+import  profile_picture  from '../Images/profile_picture.png'
+
 
 
 const Container = styled.div`
@@ -142,7 +144,6 @@ const [verificationToken, setVerificationToken] = useState("");
 
 const [verifiedUser, setVerifiedUser] = useState(null);
 
-console.log("verification page ")
 
 const handleVerify = async (e) => {
 e.preventDefault();
@@ -153,25 +154,33 @@ e.preventDefault();
             key: verificationToken
         }
     )
-    console.log(res);
         setVerifiedUser(res.data);
     }catch(error){
         console.log(error.message);
     }
 }
 
-
-    
   return (
     
     <Container>
         <Header/>
         <Wrapper>
-            <Right>
+            { 
+                !verifiedUser?.staffId
+                ?
+                (
+                <Right>
                 <Box>
                     <DetailHeader>Details</DetailHeader>
                 </Box>
-                <ProfilePic src={rihanna} alt='Rihanna'/>
+                { 
+                verifiedUser?.image !== undefined ?
+                <ProfilePic src={verifiedUser?.image} alt='Profile Image'/>
+                :
+                <ProfilePic src={profile_picture} alt='Profile picture'/>
+                
+                }
+
                 <Box2>
                     <Key>First Name: </Key>
                     <Value>{verifiedUser?.firstName}</Value>
@@ -189,6 +198,40 @@ e.preventDefault();
                     <Value>{verifiedUser?.email}</Value>
                 </Box2>
             </Right>
+        )
+            :
+        ( 
+            <Right>
+                <Box>
+                    <DetailHeader>Details</DetailHeader>
+                </Box>
+                { 
+                verifiedUser?.image !== undefined ?
+                <ProfilePic src={verifiedUser?.image} alt='profile image'/>
+                :
+                <ProfilePic src={profile_picture} alt='Profile picture'/>
+                
+                }
+
+                <Box2>
+                    <Key>Organization: </Key>
+                    <Value>{verifiedUser?.orgName}</Value>
+                </Box2>
+                <Box2>
+                    <Key>Name: </Key>
+                    <Value>{verifiedUser?.firstName}</Value>
+                </Box2>
+                <Box2>
+                    <Key>Role: </Key>
+                    <Value>{verifiedUser?.staffRole}</Value>
+                </Box2>
+                <Box2>
+                    <Key>Staff ID: </Key>
+                    <Value>{verifiedUser?.staffId}</Value>
+                </Box2>
+            </Right>
+        )
+            }
             <hr></hr>
             <Left>
                 <Title>Verify an identity</Title>
@@ -207,3 +250,32 @@ e.preventDefault();
     </Container>
   )
 }
+
+
+// {
+//     email: null,
+//     firstName: 'unyime1unyime1',
+//     lastName: null,
+//     otherName: null,
+//     nationality: null,
+//     stateOfOrigin: null,
+//     image: null,
+//     staffId: 'PRX-12345',
+//     orgName: 'org2',
+//     staffRole: 'Software Engineer'
+//   }
+
+// REACT_APP_API_BASE_URL
+
+// {
+//     email: 'unyime1@gmail.com',
+//     firstName: 'unyime1',
+//     lastName: 'unyime1',
+//     otherName: 'unyime1',
+//     nationality: 'NGN',
+//     stateOfOrigin: 'AKS',
+//     image: 'https://solididbucket.s3.amazonaws.com/photos/google ads.GIF',
+//     staffId: null,
+//     orgName: null,
+//     staffRole: null
+//   }
