@@ -15,6 +15,12 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 30px;
+
+    @media only screen and (max-width: 425px) {
+        width: 95%;
+        padding: 10px;
+        border-radius: 0px;
+}
 `
 
 const Box = styled.div`
@@ -25,6 +31,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-bottom: 20px;
+
+@media only screen and (max-width: 425px) {
+    height: 40px;
+    margin-bottom: 10px;
+}
 `
 const Box2 = styled.div`
 width: 100%;
@@ -40,21 +51,39 @@ const DetailHeader = styled.div`
     font-size: 35px;
     font-weight: 800;
     color: #31363F;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 25px;
+    }
 `
 
 const ProfilePic = styled.img`
 width: 200px;
 height: 200px;
 border-radius: 10px;
+
+@media only screen and (max-width: 425px) {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
 `
 
 const Key = styled.div`
     font-size: 20px;
     font-weight: 900;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+    }
 `
 const Value = styled.div`
     font-size: 20px;
     font-weight: 700;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+    }
 `
 
 const ProfileWrapper = styled.div`

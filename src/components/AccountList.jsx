@@ -19,6 +19,8 @@ const Container = styled.div`
     justify-content: center;
     padding: 10px;
     z-index: 3;
+
+
   `;
 
 
@@ -56,6 +58,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 425px) {
+    width: 250px;
+    height: 380px;
+    border-radius: 8px;
+    }
   
 `
 
@@ -64,6 +72,11 @@ const Title = styled.div`
     font-weight: 600;
     color: #31363F;
     margin-bottom: 30px;
+
+      @media only screen and (max-width: 425px) {
+    margin-bottom: 15px;
+    font-size: 20px;
+    }
 `
 
 const List = styled.div`
@@ -95,6 +108,10 @@ const ListItem = styled.div`
     cursor: pointer;
     background-color: white;
   }
+
+  @media only screen and (max-width: 425px) {
+    height: 25px;
+    }
 `
 const Logo = styled.img`
     width: 35px;
@@ -110,6 +127,10 @@ const OrganizationName = styled.div`
     font-size: 20px;
     font-weight: 400;
     padding-left: 10px;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+}
 
 `
 

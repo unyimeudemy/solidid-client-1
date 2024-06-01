@@ -16,6 +16,10 @@ display: flex;
 align-items: center;
 /* justify-content: center; */
 margin-top: 30px;
+
+@media only screen and (max-width: 425px) {
+    margin-top: 10px;
+    }
 `
 
 const Others = styled.div`
@@ -52,6 +56,12 @@ color: #222831;
   font-weight: 700;
   height: 50px;
   width: 150px;
+
+
+  @media only screen and (max-width: 425px) {
+    height: 35px;
+    width: 150px;
+    }
 `;
 
  const AddOrgButton = styled.button`
@@ -72,6 +82,12 @@ color: #222831;
   font-weight: 700;
   height: 50px;
   width: 150px;
+
+
+  @media only screen and (max-width: 425px) {
+    height: 35px;
+    width: 150px;
+    }
 `;
 
 const Row1 = styled.div`
@@ -102,6 +118,11 @@ const ProfileButton = styled.div`
   width: 277px;
   margin-bottom: 10px;
 
+  @media only screen and (max-width: 425px) {
+    height: 25px;
+  width: 177px;
+  margin-top: 10px;
+    }
 `
 
 export const UserProfileOptions = ({

@@ -32,6 +32,13 @@ const Wrapper = styled.div`
     width: 75%;
     height: 80%;
     border-radius: 15px;
+
+        @media only screen and (max-width: 425px) {
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        border-radius: 0px;
+    }
 `
 
 const Right = styled.div`
@@ -46,13 +53,19 @@ const Right = styled.div`
 `
 
 const Left = styled.div`
-    height: 100%;
+    height: 80%;
     width: 33%;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
+
+    @media only screen and (max-width: 425px) {
+        width: 100%;
+        padding: 0px;
+    }
+    /* background-color: red; */
 `
 
 
@@ -62,24 +75,34 @@ const Title = styled.div`
     font-weight: 800;
     color: #31363F;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 `
 
 const Input = styled.div`
     height: 40px;
-width: 300px;
-border-radius: 15px;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+    width: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 425px) {
+        height: 30px;
+    width: 200px;
+    }
 `
 
 const Button = styled.button`
-background-color: #395e60;
-border: 1px solid #395e60;
-height: 47px;
-color: white;
-font-size: 20px;
+    background-color: #395e60;
+    border: 1px solid #395e60;
+    height: 47px;
+    color: white;
+    font-size: 20px;
   width: 120px;
   color: white;
   padding: 5px 15px;
@@ -91,6 +114,12 @@ font-size: 20px;
   align-items: center;
   justify-content: center;
   gap: 5px;
+
+  @media only screen and (max-width: 425px) {
+    height: 37px;
+    font-size: 15px;
+    width: 90px;
+    }
 `
 
 const Box = styled.div`
@@ -146,6 +175,13 @@ align-items: center;
 justify-content: center;
 color: #395e60;
 
+@media only screen and (max-width: 425px) {
+    height: 37px;
+    font-size: 15px;
+    width: 120px;
+    background-color: white;
+    }
+
 `;
 
 const Token = styled.div`
@@ -155,7 +191,7 @@ border: none;
 font-size: 20px;
 width: 200px;
 font-weight: 400;
-  cursor: pointer;
+cursor: pointer;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -341,13 +377,13 @@ const handleAllMembersClicked = async () => {
                             <MemberWrapper key={member.id}>
                                 <Hr/>
                                 <Member>
-                                     <ProfileImage></ProfileImage>
-                                     <NameAndRole>
-                                         <FirstAndLastNames>{member.staffName}</FirstAndLastNames>
-                                         <Role>{member.staffRole}</Role>
-                                     </NameAndRole>
-                                 </Member>
-                             </MemberWrapper>
+                                    <ProfileImage></ProfileImage>
+                                    <NameAndRole>
+                                        <FirstAndLastNames>{member.staffName}</FirstAndLastNames>
+                                        <Role>{member.staffRole}</Role>
+                                    </NameAndRole>
+                                </Member>
+                            </MemberWrapper>
                             ))}
                             <Hr/>
                         </MemberList>
@@ -360,10 +396,10 @@ const handleAllMembersClicked = async () => {
                             <AddMemberForm
                                 handleAllMembersClicked={handleAllMembersClicked}
                             />
-                           
+                        
                         </Right>
                         )
-                     )
+                    )
                 )
                 }
                 <hr></hr>

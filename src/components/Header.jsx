@@ -19,9 +19,9 @@ const Container = styled.div`
     align-items: center;
 
 @media only screen and (max-width: 425px) {
-    height: 40%;
+    /* height: 40%; */
+    height: 55px;
     width: 100%;
-
   }
 
 `
@@ -103,9 +103,13 @@ const SignOutButton = styled.button`
   justify-content: center;
   gap: 5px;
 
- @media only screen and (max-width: 425px) {
-        display:none;
-      }
+
+      @media only screen and (max-width: 425px) {
+ width: 100px;
+  height: 35px;
+    font-size: 15px;
+
+}
 `
 
 const Txt = styled.div`
@@ -135,6 +139,13 @@ cursor: pointer;
     background-color: #426e70;
     color: #EEEE;
   }
+
+  @media only screen and (max-width: 425px) {
+ width: 90px;
+  height: 35px;
+    font-size: 15px;
+
+}
 `
 
 const Logo = styled.div`
