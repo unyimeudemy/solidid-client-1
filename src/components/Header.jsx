@@ -16,7 +16,14 @@ const Container = styled.div`
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-start; */
+    align-items: center;
+
+@media only screen and (max-width: 425px) {
+    height: 40%;
+    width: 100%;
+
+  }
+
 `
 
 
@@ -24,7 +31,7 @@ const Container = styled.div`
 const Tabs = styled.div`
     width: 40%;
     height: 100%;
-    /* background-color: #76ABAE; */
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,15 +49,13 @@ gap: 10px;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+
+    @media only screen and (max-width: 425px) {
+        display:none;
+      }
 `
 
 const ProfileButton = styled.button`
-  :hover {
-    cursor: pointer;
-    background-color: #426e70;
-    color: #EEEE;
-  }
-
 
       border-radius: 10px;
   width: 120px;
@@ -66,7 +71,21 @@ const ProfileButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 5px;
+
+  :hover {
+    cursor: pointer;
+    background-color: #426e70;
+    color: #EEEE;
+  }
+
+  @media only screen and (max-width: 425px) {
+ width: 90px;
+  height: 35px;
+    font-size: 15px;
+
+}
 `
+
 
 const SignOutButton = styled.button`
   border-radius: 10px;
@@ -84,11 +103,9 @@ const SignOutButton = styled.button`
   justify-content: center;
   gap: 5px;
 
-  /* :hover {
-    cursor: pointer;
-    background-color: #426e70;
-    color: #EEEE;
-  } */
+ @media only screen and (max-width: 425px) {
+        display:none;
+      }
 `
 
 const Txt = styled.div`
@@ -97,7 +114,7 @@ width: 100%;
 `
 
 const SignInButton = styled.button`
-      border-radius: 10px;
+    border-radius: 10px;
   width: 120px;
   height: 40px;
   color: #426e70;
@@ -120,6 +137,33 @@ cursor: pointer;
   }
 `
 
+const Logo = styled.div`
+color: #31363F;
+font-size: 30px;
+font-weight: 900;
+margin-left: 20px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+
+@media only screen and (min-width: 425px) {
+        display:none;
+      }
+
+`
+
+const Id = styled.span`
+height: 50%;
+width: 40px;
+padding: 5px;
+background-color: #FBA834;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 5px;
+`
+
 export const Header = () => {
 
 
@@ -132,6 +176,9 @@ const location = useLocation();
     <Container>
         <> 
         <SolidIDLogo/>
+        <Logo onClick={() => navigate("/")}>
+        <Id>ID</Id>
+    </Logo>  
         <Tabs>
             <Tab
                 onClick={() => navigate("/services")}       

@@ -45,6 +45,10 @@ width: 100%;
 color: #EEEEEE;
 font-size: 60px;
 font-weight: 900;
+
+@media only screen and (max-width: 425px) {
+    font-size: 30px;
+}
 `
 
 const Left = styled.div`
@@ -52,6 +56,10 @@ width: 60%;
 height: 100%;
 background-color: transparent;
 margin: 30px;
+
+@media only screen and (max-width: 425px) {
+    width: 100%;
+    }
 `
 
 const Button = styled.button`
@@ -70,7 +78,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 5px;
-/* box-shadow: 0px 6px 10px hsl(0, 0%, 100%); */
+
+@media only screen and (max-width: 425px) {
+    font-size: 13px;
+    width: 120px;
+    height: 50px;
+}
 `
 
 const Buttons = styled.div`
@@ -93,6 +106,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 5px;
+
+
 `
 
 const Quote = styled.div`
@@ -101,6 +116,11 @@ background-color: transparent;
 display: flex;
 flex-direction: column;
 padding: 30px;
+
+
+@media only screen and (max-width: 425px) {
+    height: 15%;
+    }
 `
 
 
@@ -113,6 +133,10 @@ const QuoteTitle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 30px;
+}
 `
 
 const QuoteBody = styled.div`
@@ -124,6 +148,42 @@ const QuoteBody = styled.div`
     justify-content: center;
     margin-top: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    @media only screen and (max-width: 425px) {
+        display: none;
+    }
+  
+
+`
+
+const QuoteBodySmallScreen = styled.div`
+   font-size: 30px;
+    color: #263f40;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+        text-align: center;
+        white-space: pre-wrap;
+        display: inline-block;
+
+  ::before {
+    content: '\A';
+    white-space: pre;
+    display: block;
+  }
+
+
+}
+
+@media only screen and (min-width: 425px) {
+        display: none;
+    }
 `
 
 const AmountSpan = styled.span`
@@ -140,6 +200,11 @@ padding: 30px;
 justify-content: center;
 gap: 20px;
 
+@media only screen and (max-width: 425px) {
+        flex-direction: column;
+        height: 85%;
+    }
+
 `
 
 const SectionOne = styled.div`
@@ -149,18 +214,30 @@ const SectionOne = styled.div`
     display: flex;
     flex-direction: column;
     /* padding: 20px; */
+
+    @media only screen and (max-width: 425px) {
+        width: 100%;
+    }
 `
 
 const SectionTwo = styled.div`
       height: 100%;
     width: 30%;
     background-color: transparent;
+
+    @media only screen and (max-width: 425px) {
+        width: 100%;
+    }
 `
 
 const SectionThree = styled.div`
       height: 100%;
     width: 30%;
     background-color: transparent;
+
+    @media only screen and (max-width: 425px) {
+        width: 100%;
+    }
 `
 
 const Socials = styled.div`
@@ -171,6 +248,10 @@ const Socials = styled.div`
     align-items: center;
     justify-content: center;
     gap: 40px;
+
+    @media only screen and (max-width: 425px) {
+        gap: 20px;
+    }
 `
 
 const LogoWrapper = styled.div`
@@ -178,19 +259,42 @@ const LogoWrapper = styled.div`
     background-color: transparent;
     display: flex;
     padding-left: 150px;
+    
+    @media only screen and (max-width: 425px) {
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+
+
+    }
 `
 
 const FooterTitle = styled.div`
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 30px;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
 `
 
 const FooterLink = styled.div`
  font-size: 20px;
     font-weight: 400;
     margin-bottom: 10px;
+
+    
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+        margin-bottom: 5px;
+
+    }
     `
+
+
 
 export const LandingPage = () => {
 
@@ -223,6 +327,7 @@ const {currentUser} = useSelector((state) => state.user);
             <Quote>
              <QuoteTitle>Did you know?</QuoteTitle>
              <QuoteBody>"Over <AmountSpan>$29</AmountSpan>billion was stolen by identity thieves in 2022"</QuoteBody>
+             <QuoteBodySmallScreen>"Over $29 billion was stolen by identity thieves in 2022"</QuoteBodySmallScreen>
             </Quote>
             <Footer>
                 <SectionOne>

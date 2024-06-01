@@ -14,6 +14,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 
+@media only screen and (max-width: 425px) {
+        display: none;
+    }
+
 `
 
 const Id = styled.span`
