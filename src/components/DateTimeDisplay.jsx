@@ -4,6 +4,11 @@ import styled from 'styled-components';
 const DateTimeContainer = styled.div`
   font-size: 16px;
   color: #222831;
+
+  @media only screen and (max-width: 425px) {
+        font-size: 8px;
+        justify-self: flex-end;
+    }
 `;
 
 const formatDate = (dateString) => {

@@ -26,6 +26,11 @@ const Inputs = styled.div`
     height: 100%;
     gap: 10px;
 
+    @media only screen and (max-width: 425px) {
+    gap: 5px;
+    margin-top: 10px;
+}
+
 `
 
 const Input = styled.input`
@@ -34,6 +39,11 @@ const Input = styled.input`
     font-size: 20px;
     font-weight: 500;
     color: #222831;
+
+    @media only screen and (max-width: 425px) {
+        height: 25px;
+    font-size: 15px;
+}
 `
 
 export const Button = styled.button`
@@ -55,6 +65,11 @@ export const Button = styled.button`
   height: 60px;
   width: 93%;
 
+
+  @media only screen and (max-width: 425px) {
+    margin-top: 5px;
+}
+
 `;
 
 const Box = styled.div`
@@ -64,12 +79,20 @@ background-color: #EEEEEE;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@media only screen and (max-width: 425px) {
+    height: 30px;
+}
 `
 
 const DetailHeader = styled.div`
     font-size: 35px;
     font-weight: 800;
     color: #31363F;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 20px;
+}
 `
 
 

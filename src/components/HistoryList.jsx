@@ -30,6 +30,11 @@ const MemberWrapper = styled.div`
     :hover{
         background-color: #EEEEEE;
     }
+
+    @media only screen and (max-width: 425px) {
+        height: 35px;
+        margin-bottom: 10px;
+    }
 `
 
 const ProfileImage = styled.img`
@@ -37,6 +42,11 @@ const ProfileImage = styled.img`
     height: 40px;
     width: 40px;
     background-color: gray;
+
+    @media only screen and (max-width: 425px) {
+        height: 25px;
+        width: 25px;
+    }
 `
 
 const NameAndRole = styled.div`
@@ -46,11 +56,23 @@ const NameAndRole = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media only screen and (max-width: 425px) {
+        justify-content: flex-start;  
+        justify-content: space-between;
+    }
 `
 
 const FirstAndLastNames = styled.div`
     font-weight: 600;
     color: #222831;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+
 `
 const Role = styled.div`
     
@@ -78,12 +100,20 @@ background-color: #EEEEEE;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@media only screen and (max-width: 425px) {
+    height: 30px;
+    }
 `
 
 const DetailHeader = styled.div`
     font-size: 35px;
     font-weight: 800;
     color: #31363F;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 20px;
+    }
 `
 
 const ListBody = styled.div`
@@ -93,6 +123,10 @@ const ListBody = styled.div`
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+
+    @media only screen and (max-width: 425px) {
+        height: 220px;
+    }
 `
 
 const Hr = styled.hr`
@@ -130,7 +164,7 @@ export const HistoryList = () => {
         <MemberWrapper key={history.id}>
             <Hr/>
             <Member>
-                 <ProfileImage></ProfileImage>
+                 <ProfileImage/>
                  <NameAndRole>
                      <FirstAndLastNames>{history.currentUserEmail}</FirstAndLastNames>
                     <DateTimeDisplay dateTimeString={history.date}/>  
@@ -139,7 +173,6 @@ export const HistoryList = () => {
              </Member>
         </MemberWrapper>
         ))} 
-
         <Hr/>
     </ListBody>
 </Container>
