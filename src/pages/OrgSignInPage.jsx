@@ -22,6 +22,13 @@ font-weight: 600;
 text-decoration: underline;
 margin-top: 20px;
 cursor: pointer;
+
+@media only screen and (max-width: 425px) {
+    width: 280px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
 `
 
 const Notification = styled.div`
@@ -36,12 +43,26 @@ const Notification = styled.div`
     justify-content: center;
     color: #0000ff;
 
+
+    @media only screen and (max-width: 425px) {
+        height: 30px;
+        margin-bottom: 5px;
+    border-radius: 5px;
+      width: 93%;
+}
+
 `
 
 const Message = styled.div`
     font-size: small;
     margin-left: 30px;
     font-weight: 500;
+
+
+    @media only screen and (max-width: 425px) {
+    font-size: 10px;
+    margin-left: 10px;
+}
 `;
 
  const Wrapper = styled.div`
@@ -62,6 +83,13 @@ background-color: #EEEEEE;
     width: 500px;
     align-items: center;
     justify-content: center;
+
+
+    @media only screen and (max-width: 425px) {
+        height: 250px;
+        width: 280px;
+        border-radius: 8px;
+}
     
 `
 
@@ -76,6 +104,14 @@ background-color: #EEEEEE;
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 425px) {
+    width: 90%;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 `;
 
  const Title = styled.div`
@@ -83,6 +119,11 @@ background-color: #EEEEEE;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 22px;
+    margin-bottom: 10px;
+}
 `
 
  const Buttons = styled.div`
@@ -92,6 +133,10 @@ background-color: #EEEEEE;
     gap: 150px;
     width: 80%;
     height: 35px;
+
+    @media only screen and (max-width: 425px) {
+        width: 95%;
+}
 `
 
  const Button = styled.button`
@@ -112,8 +157,11 @@ background-color: #EEEEEE;
   font-weight: 700;
   height: 60px;
   width: 100%;
-
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 425px) {
+        height: 45px;
+}
 `;
 
 const Top = styled.div`
