@@ -107,6 +107,11 @@ align-items: center;
 justify-content: center;
 gap: 5px;
 
+@media only screen and (max-width: 425px) {
+    font-size: 13px;
+    width: 120px;
+    height: 50px;
+}
 
 `
 

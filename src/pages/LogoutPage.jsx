@@ -27,12 +27,22 @@ height: 50%;
 width: 65%;
 display: flex;
 
+@media only screen and (max-width: 425px) {
+    flex-direction: column;
+    width: 100%;
+    /* background-color: red; */
+}
+/* flex-direction: column; */
 `
 
 const Text = styled.div`
 width: 70%;
 height: 100%;
 background-color: transparent;
+
+@media only screen and (max-width: 425px) {
+    width: 100%;
+}
 `
 
 const Divider = styled.div`
@@ -48,12 +58,23 @@ background-color: transparent;
 display: flex;
 align-items: center;
 justify-content: center;
+
+
+@media only screen and (max-width: 425px) {
+    width: 100%;
+}
 `
 
 const Title = styled.div`
 color: #263f40;
 font-weight: 700;
 font-size: 40px;
+
+@media only screen and (max-width: 425px) {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 `
 
 const Explanation = styled.div`
@@ -61,6 +82,14 @@ const Explanation = styled.div`
 font-weight: 500;
 font-size: 20px;
 margin-top: 30px;
+
+@media only screen and (max-width: 425px) {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
 `
 
 const RedMarker = styled.span`
@@ -75,6 +104,10 @@ font-size: 15px;
 margin-top: 120px;
 text-decoration: underline;
 cursor: pointer;
+
+@media only screen and (max-width: 425px) {
+    display: none;
+}
 `
 
 
@@ -95,6 +128,12 @@ align-items: center;
 justify-content: center;
 gap: 5px;
 /* box-shadow: 0px 6px 10px hsl(0, 0%, 100%); */
+
+@media only screen and (max-width: 425px) {
+    font-size: 15px;
+    width: 150px;
+    height: 45px;
+}
 `
 
 export const LogoutPage = () => {
@@ -122,8 +161,8 @@ const handleSignOut = () => {
                      you <RedMarker>liable</RedMarker> to identity theft.
                 </Explanation>
                 <Option
-                onClick={() => navigate("/profile")}
-                >Click here to stay signed in and help us protect your identity</Option>
+                    onClick={() => navigate("/profile")}
+                    >Click here to stay signed in and help us protect your identity</Option>
             </Text>
             <Divider/>
             <ButtonContainer>

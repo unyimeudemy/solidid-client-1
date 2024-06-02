@@ -13,7 +13,7 @@ import { PageNotAvailable } from './PageNotAvailable';
 const Container = styled.div`
     height: 70px;
     width: 100%;
-    background-color: transparent;
+    background-color: #EEEE;
     display: flex;
     justify-content: space-between;
     align-items: center;

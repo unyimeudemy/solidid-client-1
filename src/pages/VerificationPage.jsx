@@ -15,8 +15,12 @@ height: 100%;
 background-color: transparent;
 display: flex;
 align-items: center;
-justify-content: center;
+/* justify-content: center; */
 flex-direction: column;
+
+@media only screen and (max-width: 425px) {
+   /* background-color: red; */
+}
 
 `
 
@@ -27,6 +31,13 @@ const Wrapper = styled.div`
     width: 75%;
     height: 80%;
     border-radius: 15px;
+
+    @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0px;
+    height: 50%;
+}
 `
 
 const Right = styled.div`
@@ -38,6 +49,11 @@ const Right = styled.div`
     flex-direction: column;
     padding: 30px;
     gap: 10px;
+
+    @media only screen and (max-width: 425px) {
+    width: 100%;
+    padding: 10px;
+}
 `
 
 const Left = styled.div`
@@ -48,6 +64,12 @@ const Left = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 30px;
+
+    @media only screen and (max-width: 425px) {
+    /* background-color: green; */
+    width: 80%;
+    border-radius: 0%;
+}
 `
 
 const Field = styled.input`
@@ -58,6 +80,14 @@ const Field = styled.input`
     width: 200px;
     font-weight: 400;
     padding-left: 10px;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 13px;
+    height: 30px;
+    width: 120px;
+    padding-left: 5px;
+    background-color: white;
+}
 `
 
 const Title = styled.div`
@@ -65,6 +95,11 @@ const Title = styled.div`
     font-weight: 800;
     color: #31363F;
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 `
 
 const Input = styled.div`
@@ -80,13 +115,9 @@ border: 1px solid #395e60;
 height: 47px;
 color: white;
 font-size: 20px;
-/* font-weight: 700; */
-
-
   width: 100px;
   color: white;
   padding: 5px 15px;
-
   font-weight: 900;
   font-size: large;
   cursor: pointer;
@@ -95,6 +126,12 @@ font-size: 20px;
   align-items: center;
   justify-content: center;
   gap: 5px;
+
+  @media only screen and (max-width: 425px) {
+    font-size: 13px;
+    height: 33px;
+    width: 60px;
+}
 `
 
 const Box = styled.div`
@@ -104,6 +141,11 @@ background-color: #EEEEEE;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@media only screen and (max-width: 425px) {
+    height: 30px;
+    width: 95%;
+}
 `
 const Box2 = styled.div`
 width: 100%;
@@ -113,27 +155,51 @@ display: flex;
 align-items: center;
 gap: 10px;
 /* justify-content: center; */
+
+@media only screen and (max-width: 425px) {
+    height: 15px;
+    gap: 5px;
+}
 `
 
 const DetailHeader = styled.div`
     font-size: 35px;
     font-weight: 800;
     color: #31363F;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 20px;
+    
+}
 `
 
 const ProfilePic = styled.img`
 width: 200px;
 height: 200px;
 border-radius: 10px;
+
+@media only screen and (max-width: 425px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
 `
 
 const Key = styled.div`
     font-size: 20px;
     font-weight: 900;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 13px;
+}
 `
 const Value = styled.div`
     font-size: 20px;
     font-weight: 700;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 13px;
+}
 `
 
 
@@ -252,30 +318,3 @@ e.preventDefault();
 }
 
 
-// {
-//     email: null,
-//     firstName: 'unyime1unyime1',
-//     lastName: null,
-//     otherName: null,
-//     nationality: null,
-//     stateOfOrigin: null,
-//     image: null,
-//     staffId: 'PRX-12345',
-//     orgName: 'org2',
-//     staffRole: 'Software Engineer'
-//   }
-
-// REACT_APP_API_BASE_URL
-
-// {
-//     email: 'unyime1@gmail.com',
-//     firstName: 'unyime1',
-//     lastName: 'unyime1',
-//     otherName: 'unyime1',
-//     nationality: 'NGN',
-//     stateOfOrigin: 'AKS',
-//     image: 'https://solididbucket.s3.amazonaws.com/photos/google ads.GIF',
-//     staffId: null,
-//     orgName: null,
-//     staffRole: null
-//   }
