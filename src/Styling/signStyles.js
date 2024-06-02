@@ -20,6 +20,13 @@ export const Container = styled.div`
     border-radius: 15px;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 425px) {
+        height: 250px;
+        width: 280px;
+        border-radius: 8px;
+}
+
     
 `
 
@@ -42,6 +49,14 @@ export const Input = styled.input`
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 425px) {
+    width: 90%;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 `;
 
 export const Title = styled.div`
@@ -49,6 +64,11 @@ export const Title = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
+
+       @media only screen and (max-width: 425px) {
+        font-size: 25px;
+    margin-bottom: 10px;
+}
 `
 
 export const Buttons = styled.div`
@@ -57,7 +77,12 @@ export const Buttons = styled.div`
     justify-content: space-around;
     gap: 150px;
     width: 80%;
-    height: 35px;
+    /* height: 35px; */
+
+        @media only screen and (max-width: 425px) {
+        width: 95%;
+        /* height: 25px; */
+}
 `
 
 export const Button = styled.button`
@@ -78,8 +103,11 @@ export const Button = styled.button`
   font-weight: 700;
   height: 60px;
   width: 100%;
-
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 425px) {
+        height: 45px;
+}
 `;
 
 export const Body = styled.div`

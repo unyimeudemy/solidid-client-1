@@ -22,6 +22,11 @@ font-weight: 600;
 text-decoration: underline;
 margin-top: 20px;
 cursor: pointer;
+
+@media only screen and (max-width: 425px) {
+    width: 280px;
+    font-size: 14px;
+}
 `
 
 const Notification = styled.div`
@@ -35,6 +40,13 @@ const Notification = styled.div`
     align-items: center;
     justify-content: center;
     color: #0000ff;
+
+    @media only screen and (max-width: 425px) {
+        height: 30px;
+        margin-bottom: 5px;
+    border-radius: 5px;
+      width: 90%;
+}
 
 `
 const Error = styled.div`
@@ -55,6 +67,11 @@ const Message = styled.div`
     font-size: small;
     margin-left: 30px;
     font-weight: 500;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 10px;
+    margin-left: 10px;
+}
 `;
 
 export const SigninPage = () => {
