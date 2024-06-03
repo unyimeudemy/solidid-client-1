@@ -22,6 +22,11 @@ font-weight: 600;
 text-decoration: underline;
 margin-top: 20px;
 cursor: pointer;
+
+@media only screen and (max-width: 425px) {
+    width: 280px;
+    font-size: 14px;
+}
 `
 
 const Notification = styled.div`
@@ -35,6 +40,13 @@ const Notification = styled.div`
     align-items: center;
     justify-content: center;
     color: #0000ff;
+
+        @media only screen and (max-width: 425px) {
+        height: 30px;
+        margin-bottom: 5px;
+    border-radius: 5px;
+      width: 90%;
+}
 
 `
 
@@ -54,8 +66,17 @@ const InputEmail = styled.input`
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 560;
+
+
+    @media only screen and (max-width: 425px) {
+    width: 90%;
+  height: 25px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 `;
 
 // const InValidEmail = styled.div`

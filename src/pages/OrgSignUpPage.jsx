@@ -63,6 +63,10 @@ background-color: #EEEEEE;
     width: 500px;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 425px) {
+       width: 350px;
+}
     
 `
 

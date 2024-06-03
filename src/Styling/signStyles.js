@@ -22,7 +22,7 @@ export const Container = styled.div`
     justify-content: center;
 
     @media only screen and (max-width: 425px) {
-        height: 250px;
+        height: 350px;
         width: 280px;
         border-radius: 8px;
 }
@@ -49,6 +49,8 @@ export const Input = styled.input`
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 20px;
+   font-size: 15px;
+  font-weight: 560;
 
   @media only screen and (max-width: 425px) {
     width: 90%;
@@ -81,7 +83,7 @@ export const Buttons = styled.div`
 
         @media only screen and (max-width: 425px) {
         width: 95%;
-        /* height: 25px; */
+        gap: 30px;
 }
 `
 
@@ -106,7 +108,8 @@ export const Button = styled.button`
   margin-bottom: 20px;
 
   @media only screen and (max-width: 425px) {
-        height: 45px;
+        height: 40px;
+        
 }
 `;
 

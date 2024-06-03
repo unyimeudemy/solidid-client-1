@@ -318,7 +318,8 @@ const MemberWrapper = styled.div`
 
     @media only screen and (max-width: 425px) {
         height: 35px;
-    }`
+    }
+    `
 
 const ProfileImage = styled.img`
     border-radius: 100%;
