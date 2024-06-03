@@ -50,9 +50,9 @@ export const Button = styled.button`
   justify-content: center;
   gap: 5px;
   font-weight: 700;
-  height: 60px;
   width: 93%;
-
+height: 80px;
+margin-top: 10px;
 `;
 
 

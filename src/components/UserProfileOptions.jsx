@@ -61,6 +61,7 @@ color: #222831;
   @media only screen and (max-width: 425px) {
     height: 35px;
     width: 150px;
+    background-color: white;
     }
 `;
 
@@ -87,6 +88,7 @@ color: #222831;
   @media only screen and (max-width: 425px) {
     height: 35px;
     width: 150px;
+    background-color: white;
     }
 `;
 
@@ -122,6 +124,7 @@ const ProfileButton = styled.div`
     height: 25px;
   width: 177px;
   margin-top: 10px;
+  background-color: white;
     }
 `
 

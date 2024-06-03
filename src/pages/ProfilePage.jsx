@@ -36,8 +36,8 @@ const Wrapper = styled.div`
         @media only screen and (max-width: 425px) {
         flex-direction: column;
         width: 100%;
-        height: 50%;
         border-radius: 0px;
+        height: 100%;
     }
 `
 
@@ -50,6 +50,14 @@ const Right = styled.div`
     flex-direction: column;
     padding: 30px;
     gap: 10px;
+
+    @media only screen and (max-width: 425px) {
+    width: 100%;
+    border-radius: 0px;
+    padding: 0px;
+    gap:5px;
+
+}
 `
 
 const Left = styled.div`
@@ -62,10 +70,13 @@ const Left = styled.div`
     padding: 30px;
 
     @media only screen and (max-width: 425px) {
-        width: 100%;
-        padding: 0px;
+        height: 40%;
+        width: 95%;
+        border-radius: 15px;
+        border-radius: 0px;
+        padding: 10px;
+        background-color: #EEEE;
     }
-    /* background-color: red; */
 `
 
 
@@ -79,6 +90,7 @@ const Title = styled.div`
     @media only screen and (max-width: 425px) {
         font-size: 20px;
         margin-bottom: 10px;
+        display: none;
     }
 `
 
@@ -129,6 +141,13 @@ background-color: #EEEEEE;
 display: flex;
 align-items: center;
 justify-content: center;
+
+
+@media only screen and (max-width: 425px) {
+    height: 30px;
+    border: 1px solid ;
+    background-color: #EEEEEE;
+}
 `
 const Box2 = styled.div`
 width: 100%;
@@ -138,27 +157,48 @@ display: flex;
 align-items: center;
 gap: 10px;
 /* justify-content: center; */
+
+@media only screen and (max-width: 425px) {
+        gap: 5px;
+    }
 `
 
 const DetailHeader = styled.div`
     font-size: 35px;
     font-weight: 800;
     color: #31363F;
+
+    @media only screen and (max-width: 425px) {
+    font-size: 20px;
+}
 `
 
 const ProfilePic = styled.img`
 width: 200px;
 height: 200px;
 border-radius: 10px;
+
+@media only screen and (max-width: 425px) {
+    width: 50px;
+height: 50px;
+}
 `
 
 const Key = styled.div`
     font-size: 20px;
     font-weight: 900;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+    }
 `
 const Value = styled.div`
     font-size: 20px;
     font-weight: 700;
+
+    @media only screen and (max-width: 425px) {
+        font-size: 15px;
+    }
 `
 
 
@@ -205,6 +245,11 @@ const List = styled.div`
     height: 100%;
     width: 100%;
     flex-direction: column;
+
+       @media only screen and (max-width: 425px) {
+        height: 90%;
+    width: 90%;
+    }
 `
 const Option = styled.div`
 width: 100%;
@@ -216,6 +261,12 @@ justify-content: center;
 padding: 5px;
 border: 1px solid ;
 cursor: pointer;
+
+   @media only screen and (max-width: 425px) {
+       height: 25px;
+       padding: 10px;
+       background-color: white;
+    }
 `
 
 const   Des = styled.div`
@@ -273,6 +324,10 @@ const NameAndRole = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+`
+
+const OrgProfileDetail = styled.div`
+    padding: 5px;
 `
 
 const FirstAndLastNames = styled.div`
@@ -360,11 +415,13 @@ const handleAllMembersClicked = async () => {
                     <Box>
                         <DetailHeader>Profile</DetailHeader>
                     </Box>
+                    <OrgProfileDetail>
                     <ProfilePic src={logo} alt='msft'/>
                     <Box2>
-                        <Key>Organization name: </Key>
+                        <Key>Organization : </Key>
                         <Value>{organizationName}</Value>
                     </Box2>
+                    </OrgProfileDetail>
                 </Right>
                     :(
                         viewAllMembers ?
