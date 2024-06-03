@@ -63,18 +63,16 @@ export const AddMemberForm = ({handleAllMembersClicked}) => {
     const [staffID, setStaffID] = useState();
 
     const {currentUser} = useSelector((state) => state.user);
-    console.log("currentUser: ", currentUser);
     const {
         email,
         organizationName
     } = currentUser;
 
-    console.log("staffid: ", staffID);
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await Axios.post(
+            await Axios.post(
                 "/org/add-member",
                 {
                     staffName ,

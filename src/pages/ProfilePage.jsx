@@ -283,6 +283,11 @@ const MemberList = styled.div`
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
+
+       @media only screen and (max-width: 425px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 `
 
 const Member = styled.div`
@@ -305,16 +310,26 @@ const MemberWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-items: center;
     :hover{
         background-color: #EEEEEE;
     }
-`
+
+    @media only screen and (max-width: 425px) {
+        height: 35px;
+    }`
 
 const ProfileImage = styled.img`
     border-radius: 100%;
     height: 40px;
     width: 40px;
     background-color: gray;
+
+    @media only screen and (max-width: 425px) {
+    height: 25px;
+    width: 25px;
+    }
 `
 
 const NameAndRole = styled.div`
@@ -324,13 +339,18 @@ const NameAndRole = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media only screen and (max-width: 425px) {
+        justify-content: space-between;
+    }
 `
 
 const OrgProfileDetail = styled.div`
     padding: 5px;
 `
 
-const FirstAndLastNames = styled.div`
+const FirstAndLastNames = styled.div`   
+    margin-left: 10px;
     
 `
 const Role = styled.div`
@@ -434,7 +454,7 @@ const handleAllMembersClicked = async () => {
                             <MemberWrapper key={member.id}>
                                 <Hr/>
                                 <Member>
-                                    <ProfileImage></ProfileImage>
+                                    <ProfileImage/>
                                     <NameAndRole>
                                         <FirstAndLastNames>{member.staffName}</FirstAndLastNames>
                                         <Role>{member.staffRole}</Role>
