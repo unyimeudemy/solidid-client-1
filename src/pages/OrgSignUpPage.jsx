@@ -67,7 +67,7 @@ background-color: #EEEEEE;
     @media only screen and (max-width: 425px) {
        width: 350px;
 }
-    
+
 `
 
 
